@@ -39,7 +39,7 @@ class Song
   end
 
   def self.artist_count
-    @@artistf.inject(hash.new(0)) {|total, i| total[i] += 1; total}
+    @@artist.inject(hash.new(0)) {|total, i| total[i] += 1; total}
   end
 
 

@@ -9,11 +9,11 @@ class Song
   end
 
   def self.genre
-    @@genres.unique
+    @@genres.uniq
   end
 
   def self.artist
-    @@artists.unique
+    @@artists.uniq
   end
 
   def initialize(name, artist, genre)

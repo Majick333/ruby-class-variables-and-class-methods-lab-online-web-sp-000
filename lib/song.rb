@@ -13,14 +13,14 @@ class Song
   end
 
   def self.artists
-    @@artists
+    @@artists.unique
   end
 
   def initialize(name, artist, genre)
     @name = name,
     @artist = artist,
     @genre = genre,
-    @@artist << artist,
+    @@artists << artist,
     @@genres << genre,
     @@count += 1
   end
@@ -36,6 +36,10 @@ class Song
       end
     end
     genre_count
+  end
+
+  def self.artist_count
+    @@artistf.inject(hash.new(0)) {|total, i| total[i] += 1; total}
   end
 
 
